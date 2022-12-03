@@ -14,7 +14,6 @@ func CommonItems() -> [String] {
         let right_half = r[r_middle..<r.endIndex]
         var prev_letter : String = ""
         for chr in right_half where left_half.contains(chr) {
-            let chrString = String(chr)
             // Prevents already seen letters to appear, influxing the score
             if !prev_letter.contains(chrString) {
                 // Concat string to prev_letter
@@ -49,9 +48,10 @@ print("Exercise 1: \(TotalSignificance)")
 // ------------------------------------------------------
 var common_badge : [String] = []
 for i in stride(from: 0, to: rucksacks.count, by: 3) {
-    var ite = rucksacks
+    let ite = rucksacks
     var prev_letter : String = ""
-    for first_chr in ite[i] where ite[i+1].contains(first_chr) && ite[i+2].contains(first_chr) {
+    for first_chr in ite[i] where ite[i+1].contains(first_chr) && 
+                                  ite[i+2].contains(first_chr) {
         if !prev_letter.contains(first_chr) {
             let strChr = String(first_chr)
             prev_letter += strChr
