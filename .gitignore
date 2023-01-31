@@ -1,2 +1,5 @@
 **.vscode
 **/.DS_Store
+**/day*/target*
+day1/Rust/elfs/target/
+day1/Rust/elfs/target/
