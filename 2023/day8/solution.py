@@ -33,24 +33,6 @@ def traverse(startInstruction: str, instructionSet: dict, command: str, type="al
         index += 1
 
     return counter
-    #elif type == "startingWith":
-    #    # Doing 50 million traversalsthe traditiona way is just too slow.
-    #    # We will use Memoization
-    #    memoTable = dict()
-
-    #    # Gets all the instructions that ends with A
-    #    currentInstruction = list(filter(lambda x: x[-1] == "A", instructionSet.keys()))
-    #    # Check if all the currentInstructions ends with Z. if they do break while
-    #    while not all(inst[-1] == "Z" for inst in currentInstruction):
-    #        if index == len(command):
-    #            index = 0
-
-    #        currentInstruction = list(map(lambda x: instructionSet[x][1] if command[index] == "R" else instructionSet[x][0], currentInstruction))
-
-    #        counter += 1
-    #        index += 1
-    #    return counter
-
 
 myDict = MakeDictionary(data)
 print(f' Exercise 1 : traversals: {traverse("AAA", myDict, command)}')
